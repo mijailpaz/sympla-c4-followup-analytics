@@ -56,7 +56,7 @@ def load_settings():
     # Default values without token
     return {
         "project_id": "67327904",
-        "file_path": "likec4.json",
+        "file_path": "symplaC4.json",
         "branch": "main",
         "selected_links": ["repository", "logs", "APM", "openAPI", "monitor", "dashboard"]
     }
@@ -94,7 +94,7 @@ if 'settings_loaded' not in st.session_state:
     settings = load_settings()
     st.session_state.gitlab_token = ""  # Initialize with empty string for security
     st.session_state.project_id = settings.get("project_id", "67327904")
-    st.session_state.file_path = settings.get("file_path", "likec4.json")
+    st.session_state.file_path = settings.get("file_path", "symplaC4.json")
     st.session_state.branch = settings.get("branch", "main")
     st.session_state.selected_links = settings.get("selected_links", ["repository", "logs", "APM", "openAPI", "monitor", "dashboard"])
     st.session_state.settings_loaded = True
@@ -546,7 +546,7 @@ with st.sidebar:
                 # Reset session state to defaults
                 st.session_state.gitlab_token = ""
                 st.session_state.project_id = "67327904"
-                st.session_state.file_path = "likec4.json"
+                st.session_state.file_path = "symplaC4.json"
                 st.session_state.branch = "main"
                 st.session_state.selected_links = ["repository", "logs", "APM", "openAPI", "monitor", "dashboard"]
                 st.success("Settings cleared!")
