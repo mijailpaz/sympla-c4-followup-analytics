@@ -378,7 +378,7 @@ with st.sidebar:
                     )
                     if c4_data:
                         st.session_state.c4_data = c4_data
-                        target_kinds = ['container', 'application', 'service', 'webapp', 'mobile']
+                        target_kinds = ['container', 'application', 'service', 'webapp', 'mobile', 'symfony-app']
                         st.session_state.mapped_elements = extract_elements(c4_data, target_kinds)
                         st.success(f"Successfully fetched {len(st.session_state.mapped_elements)} elements!")
                         
